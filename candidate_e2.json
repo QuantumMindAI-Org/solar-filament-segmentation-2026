@@ -1,0 +1,22 @@
+{
+  "schema": "solar-filament-candidate/v1",
+  "status": "FINAL",
+  "label": "K2",
+  "models": [
+    {
+      "name": "run2",
+      "file": "weights/run2.pt",
+      "sha256": "69d9687ac4baa36a2c60d556da945b7346883a9a54340b60c309b52f748f9ce1"
+    }
+  ],
+  "ensemble": "integer_mean_half_up",
+  "entry": "E2",
+  "note": "Second entry (E2): the same model and maps under the plain rule, threshold 0.5 and minimum area 512 (both cuts 0.5, so every pixel at or above the cut is a seed). expected_csv_sha256 is the sha256 of the CSV submitted as entry E2, shipped as submitted/e2.csv. Use: python reproduce.py --candidate candidate_e2.json ...",
+  "rule": {
+    "T_low": 0.5,
+    "T_high": 0.5,
+    "A": 512
+  },
+  "expected_csv_sha256": "13cb7bafc5958acecf152812eaf601456011543cd7476f104301442f965ce066",
+  "submitted_csv": "submitted/e2.csv"
+}

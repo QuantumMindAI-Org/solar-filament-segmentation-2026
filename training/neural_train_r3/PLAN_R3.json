@@ -1,0 +1,22 @@
+{
+  "allocation_seconds": 10800,
+  "arms": {
+    "A": {"cl_weight": 0.0, "dice_weight": 1.0},
+    "B": {"cl_weight": 0.5, "dice_weight": 0.5},
+    "R": {"cl_weight": 0.0, "dice_weight": 1.0}
+  },
+  "arm_r": {"steps": 2000, "lr": 0.001, "weight_decay": 0.0001, "allocation_seconds": 5400, "warmup": false, "decay": false, "step_rule": false,
+            "loss": "neural_baseline_r1.model.loss", "order": ["R1", "R2", "R3"]},
+  "addendum_r": "neural_train_r3_addendum_r/PREREG_ADDENDUM_R.md",
+  "addendum_r_sha256": "ffda73d2f571ea80351127d15539110c161c97765875db9bb750857386dfccd2",
+  "area_filter_pixels": 512,
+  "baseline_freeze_sha256": "3539b77590fff270c985bcc479cb8c008b27b4a94defa773c8be05ff95be37d5",
+  "default_steps": 6000,
+  "lr": {"min": 1e-05, "peak": 0.001, "schedule": "linear warm-up (step+1)/200 for steps 0..199, then cosine to min at the last step"},
+  "order": ["A1", "B1", "A2", "B2", "A3", "B3", "R1", "R2", "R3"],
+  "prereg": "neural_train_r3/PREREG.md",
+  "prereg_sha256": "e2f786fa00cd38e37669101e7d57ac384732bc49c57811397ae4746ddfa0f257",
+  "seeds": [20261111, 20261112, 20261113],
+  "step_rule": {"measure": "wall seconds of the first 200 steps", "quantum": 500, "train_budget_seconds": 9900},
+  "validation_reserve_seconds": 600
+}

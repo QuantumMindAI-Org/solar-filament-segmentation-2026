@@ -1,0 +1,202 @@
+[2026-11-13T11:11:00Z +   14.8s] SCORING WORKERS READY: 4 fresh interpreters (score_worker.py by path), start [3.5, 3.5, 3.5, 3.5] s, ru_maxrss at exec [0.546, 0.546, 0.546, 0.546] GiB, after imports [0.546, 0.549, 0.546, 0.55] GiB; parent peak when started 0.55 GiB
+[2026-11-13T11:11:00Z +   15.1s] mode full; hardware: {"cpu_count": 4, "cuda": "13.0", "cuda_available": true, "gpus": [{"name": "Tesla T4", "total_gb": 14.6}, {"name": "Tesla T4", "total_gb": 14.6}], "mem_total_gb": 31.3, "numpy": "2.1.3", "platform": "Linux-6.18.55+-x86_64-with-glibc2.39", "python": "3.13.16", "torch": "2.11.0+cu130"}
+[2026-11-13T11:11:00Z +   15.1s] lists: train 443, validation 141 images (34 components, 234 annotator groups); holdout ids excluded: 123 (names from the plan only, never opened)
+[2026-11-13T11:11:01Z +   15.9s] weights downloaded in 0.5 s, sha256 b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f
+[2026-11-13T11:11:01Z +   16.2s] pretrained encoder loaded from download:https://download.pytorch.org/models/resnet34-b627a593.pth sha256 b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f (180 tensors)
+[2026-11-13T11:12:25Z +   99.9s] preloaded 443 images (targets=True) in 82.9 s
+[2026-11-13T11:12:47Z +  121.9s] preloaded 141 images (targets=False) in 21.9 s
+[2026-11-13T11:12:50Z +  124.7s] train tensors X (443, 3, 1024, 1024) (2.60 GB) Y (443, 1024, 1024); foreground share 0.0037; fg-crop centres per image min 109; annotators per train image {1: 268, 2: 91, 3: 84}; disk fallbacks train 0 val 0; parent peak RSS 11.97 GiB
+[2026-11-13T11:12:50Z +  125.1s] validation truth frames built: 34 components, 1662 GT rows
+[2026-11-13T11:12:53Z +  128.4s] SCORING PREFLIGHT: component 11 (7 images, 178 GT rows), parent peak RSS 11.97 GiB, mode subprocess
+[2026-11-13T11:12:56Z +  131.0s] SCORING PREFLIGHT OK: zero-map PQ 0.0000 (FN 178), oracle-map PQ 0.6301; parent peak 11.97 GiB, scoring child peak 0.723 GiB, scoring child start [3.5, 3.5, 3.5, 3.5] s (limit 180 s), child ru_maxrss at exec [0.546, 0.546, 0.546, 0.546] GiB, 6 s
+[2026-11-13T11:12:56Z +  131.3s] model unet 24.44 M params; device cuda; GPUs used 2 (DataParallel)
+[2026-11-13T11:13:02Z +  136.7s] training: 30 epochs x 110 steps (batch 16, crop 512 at work 1024) = 3300 steps; eval every 5 epochs
+[2026-11-13T11:13:02Z +  136.7s] gpu at start: 0, Tesla T4, 0 %, 213 MiB, 15360 MiB | 1, Tesla T4, 0 %, 3 MiB, 15360 MiB
+[2026-11-13T11:13:13Z +  147.7s] step 1/3300 epoch 1 loss 1.8052 (bce 0.8197 dice 0.014) lr 5.45e-06  1.5 crops/s  data-wait 7%  gpu: 0, Tesla T4, 3 %, 817 MiB, 15360 MiB | 1, Tesla T4, 0 %, 593 MiB, 15360 MiB
+[2026-11-13T11:13:14Z +  148.7s] step 2/3300 epoch 1 loss 1.8025 (bce 0.8167 dice 0.014) lr 8.18e-06  2.7 crops/s  data-wait 6%  gpu: 0, Tesla T4, 76 %, 2557 MiB, 15360 MiB | 1, Tesla T4, 95 %, 2559 MiB, 15360 MiB
+[2026-11-13T11:13:15Z +  149.7s] step 3/3300 epoch 1 loss 1.8002 (bce 0.8164 dice 0.016) lr 1.09e-05  3.7 crops/s  data-wait 6%  gpu: 0, Tesla T4, 82 %, 2895 MiB, 15360 MiB | 1, Tesla T4, 96 %, 2565 MiB, 15360 MiB
+[2026-11-13T11:13:36Z +  171.1s] step 25/3300 epoch 1 loss 1.6739 (bce 0.6866 dice 0.013) lr 7.09e-05  11.6 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:14:01Z +  196.4s] step 50/3300 epoch 1 loss 1.5578 (bce 0.5680 dice 0.010) lr 1.39e-04  13.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:14:28Z +  223.2s] step 75/3300 epoch 1 loss 1.4680 (bce 0.4867 dice 0.019) lr 2.07e-04  13.9 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:14:56Z +  251.5s] step 100/3300 epoch 1 loss 1.3791 (bce 0.3998 dice 0.021) lr 2.75e-04  13.9 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2917 MiB, 15360 MiB | 1, Tesla T4, 79 %, 2347 MiB, 15360 MiB
+[2026-11-13T11:15:07Z +  262.1s] EPOCH 1 done: loss 1.5528, 14.0 crops/s (3.5 full work-size images/s), data-wait 1%, 125 s, peak GPU mem 3.17 GB
+[2026-11-13T11:15:23Z +  278.5s] step 125/3300 epoch 2 loss 1.2830 (bce 0.3104 dice 0.027) lr 3.00e-04  14.7 crops/s  data-wait 3%  gpu: -
+[2026-11-13T11:15:50Z +  305.5s] step 150/3300 epoch 2 loss 1.2046 (bce 0.2308 dice 0.026) lr 3.00e-04  14.8 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:16:18Z +  333.0s] step 175/3300 epoch 2 loss 1.1431 (bce 0.1695 dice 0.026) lr 3.00e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:16:45Z +  359.6s] step 200/3300 epoch 2 loss 1.0680 (bce 0.1336 dice 0.066) lr 2.99e-04  14.8 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2567 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2425 MiB, 15360 MiB
+[2026-11-13T11:17:06Z +  381.3s] EPOCH 2 done: loss 1.1616, 14.8 crops/s (3.7 full work-size images/s), data-wait 0%, 119 s, peak GPU mem 3.17 GB
+[2026-11-13T11:17:12Z +  387.4s] step 225/3300 epoch 3 loss 0.9736 (bce 0.1021 dice 0.129) lr 2.99e-04  13.0 crops/s  data-wait 8%  gpu: -
+[2026-11-13T11:17:39Z +  414.5s] step 250/3300 epoch 3 loss 0.9339 (bce 0.0766 dice 0.143) lr 2.99e-04  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:18:06Z +  441.3s] step 275/3300 epoch 3 loss 0.9055 (bce 0.0527 dice 0.147) lr 2.98e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:18:33Z +  468.5s] step 300/3300 epoch 3 loss 0.7313 (bce 0.0431 dice 0.312) lr 2.97e-04  14.7 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2901 MiB, 15360 MiB | 1, Tesla T4, 80 %, 2449 MiB, 15360 MiB
+[2026-11-13T11:19:00Z +  495.5s] step 325/3300 epoch 3 loss 0.7626 (bce 0.0343 dice 0.272) lr 2.97e-04  14.7 crops/s  data-wait 0%  gpu: -
+[2026-11-13T11:19:06Z +  501.0s] EPOCH 3 done: loss 0.8515, 14.7 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 3.17 GB
+[2026-11-13T11:19:28Z +  523.1s] step 350/3300 epoch 4 loss 0.6490 (bce 0.0260 dice 0.377) lr 2.96e-04  14.4 crops/s  data-wait 3%  gpu: -
+[2026-11-13T11:19:55Z +  550.3s] step 375/3300 epoch 4 loss 0.5698 (bce 0.0267 dice 0.457) lr 2.95e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:20:22Z +  577.4s] step 400/3300 epoch 4 loss 0.5376 (bce 0.0221 dice 0.484) lr 2.94e-04  14.7 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2569 MiB, 15360 MiB | 1, Tesla T4, 82 %, 2425 MiB, 15360 MiB
+[2026-11-13T11:20:50Z +  604.6s] step 425/3300 epoch 4 loss 0.4283 (bce 0.0224 dice 0.594) lr 2.93e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:21:06Z +  620.8s] EPOCH 4 done: loss 0.5393, 14.7 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 3.17 GB
+[2026-11-13T11:21:17Z +  632.4s] step 450/3300 epoch 5 loss 0.4122 (bce 0.0191 dice 0.607) lr 2.92e-04  13.9 crops/s  data-wait 6%  gpu: -
+[2026-11-13T11:21:44Z +  659.4s] step 475/3300 epoch 5 loss 0.4604 (bce 0.0285 dice 0.568) lr 2.91e-04  14.5 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:22:11Z +  686.5s] step 500/3300 epoch 5 loss 0.3284 (bce 0.0200 dice 0.692) lr 2.89e-04  14.6 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2837 MiB, 15360 MiB | 1, Tesla T4, 85 %, 2347 MiB, 15360 MiB
+[2026-11-13T11:22:39Z +  713.7s] step 525/3300 epoch 5 loss 0.4047 (bce 0.0199 dice 0.615) lr 2.88e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:23:06Z +  740.8s] step 550/3300 epoch 5 loss 0.3550 (bce 0.0175 dice 0.663) lr 2.86e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:23:06Z +  740.9s] EPOCH 5 done: loss 0.4036, 14.7 crops/s (3.7 full work-size images/s), data-wait 1%, 120 s, peak GPU mem 3.17 GB
+[2026-11-13T11:24:14Z +  809.4s] VALIDATION epoch 5 (no TTA, quick grid): (0.5,0.5,512) PQ 0.3641; (0.35,0.7,256) PQ 0.3398; (0.25,0.7,512) PQ 0.3454; (0.15,0.8,1024) PQ 0.3208  -> best 0.3641  [registered baseline 0.2142; stop rule 0.27]; parent peak 11.97 GiB, scoring child peak 1.137 GiB, 68 s
+[2026-11-13T11:24:15Z +  809.7s] new best checkpoint epoch 5 quick PQ 0.3641 sha256 bb8dda51c1925ef9bc815e5b10ca45f209c76856d4fc8e6a533e1ddb4cdfd74a
+[2026-11-13T11:24:44Z +  838.8s] step 575/3300 epoch 6 loss 0.3765 (bce 0.0167 dice 0.640) lr 2.85e-04  13.8 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:25:11Z +  865.9s] step 600/3300 epoch 6 loss 0.3392 (bce 0.0184 dice 0.679) lr 2.83e-04  14.3 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2565 MiB, 15360 MiB | 1, Tesla T4, 85 %, 2363 MiB, 15360 MiB
+[2026-11-13T11:25:37Z +  892.1s] step 625/3300 epoch 6 loss 0.3237 (bce 0.0222 dice 0.698) lr 2.81e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:26:05Z +  920.3s] step 650/3300 epoch 6 loss 0.3588 (bce 0.0241 dice 0.665) lr 2.79e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:26:16Z +  931.1s] EPOCH 6 done: loss 0.3594, 14.5 crops/s (3.6 full work-size images/s), data-wait 0%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T11:26:33Z +  947.7s] step 675/3300 epoch 7 loss 0.2863 (bce 0.0211 dice 0.735) lr 2.78e-04  14.5 crops/s  data-wait 3%  gpu: -
+[2026-11-13T11:26:59Z +  974.5s] step 700/3300 epoch 7 loss 0.3316 (bce 0.0199 dice 0.688) lr 2.76e-04  14.8 crops/s  data-wait 1%  gpu: 0, Tesla T4, 96 %, 2563 MiB, 15360 MiB | 1, Tesla T4, 71 %, 2441 MiB, 15360 MiB
+[2026-11-13T11:27:27Z + 1001.9s] step 725/3300 epoch 7 loss 0.3867 (bce 0.0225 dice 0.636) lr 2.74e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:27:54Z + 1028.8s] step 750/3300 epoch 7 loss 0.3229 (bce 0.0243 dice 0.701) lr 2.71e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:28:15Z + 1050.3s] EPOCH 7 done: loss 0.3465, 14.8 crops/s (3.7 full work-size images/s), data-wait 0%, 119 s, peak GPU mem 7.19 GB
+[2026-11-13T11:28:21Z + 1056.4s] step 775/3300 epoch 8 loss 0.3180 (bce 0.0189 dice 0.701) lr 2.69e-04  13.1 crops/s  data-wait 9%  gpu: -
+[2026-11-13T11:28:49Z + 1083.7s] step 800/3300 epoch 8 loss 0.3931 (bce 0.0282 dice 0.635) lr 2.67e-04  14.4 crops/s  data-wait 2%  gpu: 0, Tesla T4, 97 %, 2917 MiB, 15360 MiB | 1, Tesla T4, 83 %, 2349 MiB, 15360 MiB
+[2026-11-13T11:29:16Z + 1110.6s] step 825/3300 epoch 8 loss 0.3527 (bce 0.0196 dice 0.667) lr 2.65e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:29:43Z + 1137.7s] step 850/3300 epoch 8 loss 0.3280 (bce 0.0194 dice 0.691) lr 2.62e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:30:10Z + 1165.1s] step 875/3300 epoch 8 loss 0.3421 (bce 0.0231 dice 0.681) lr 2.60e-04  14.6 crops/s  data-wait 0%  gpu: -
+[2026-11-13T11:30:15Z + 1170.5s] EPOCH 8 done: loss 0.3406, 14.6 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:30:38Z + 1192.7s] step 900/3300 epoch 9 loss 0.3131 (bce 0.0198 dice 0.707) lr 2.57e-04  14.4 crops/s  data-wait 2%  gpu: 0, Tesla T4, 98 %, 2563 MiB, 15360 MiB | 1, Tesla T4, 77 %, 2457 MiB, 15360 MiB
+[2026-11-13T11:31:05Z + 1219.9s] step 925/3300 epoch 9 loss 0.3314 (bce 0.0211 dice 0.690) lr 2.55e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:31:32Z + 1247.2s] step 950/3300 epoch 9 loss 0.3253 (bce 0.0188 dice 0.694) lr 2.52e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:31:59Z + 1274.4s] step 975/3300 epoch 9 loss 0.3002 (bce 0.0184 dice 0.718) lr 2.49e-04  14.6 crops/s  data-wait 0%  gpu: -
+[2026-11-13T11:32:16Z + 1290.7s] EPOCH 9 done: loss 0.3303, 14.6 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:32:27Z + 1302.2s] step 1000/3300 epoch 10 loss 0.3343 (bce 0.0128 dice 0.678) lr 2.47e-04  13.9 crops/s  data-wait 5%  gpu: 0, Tesla T4, 99 %, 2563 MiB, 15360 MiB | 1, Tesla T4, 76 %, 2441 MiB, 15360 MiB
+[2026-11-13T11:32:54Z + 1329.5s] step 1025/3300 epoch 10 loss 0.3379 (bce 0.0194 dice 0.681) lr 2.44e-04  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:33:22Z + 1356.7s] step 1050/3300 epoch 10 loss 0.3603 (bce 0.0223 dice 0.662) lr 2.41e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:33:49Z + 1383.9s] step 1075/3300 epoch 10 loss 0.3674 (bce 0.0200 dice 0.653) lr 2.38e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:34:16Z + 1411.1s] step 1100/3300 epoch 10 loss 0.2817 (bce 0.0162 dice 0.734) lr 2.35e-04  14.6 crops/s  data-wait 0%  gpu: 0, Tesla T4, 99 %, 2565 MiB, 15360 MiB | 1, Tesla T4, 78 %, 2363 MiB, 15360 MiB
+[2026-11-13T11:34:16Z + 1411.2s] EPOCH 10 done: loss 0.3258, 14.6 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:35:18Z + 1472.7s] VALIDATION epoch 10 (no TTA, quick grid): (0.5,0.5,512) PQ 0.3912; (0.35,0.7,256) PQ 0.3762; (0.25,0.7,512) PQ 0.3791; (0.15,0.8,1024) PQ 0.3467  -> best 0.3912  [registered baseline 0.2142; stop rule 0.27]; parent peak 11.97 GiB, scoring child peak 1.142 GiB, 62 s
+[2026-11-13T11:35:18Z + 1473.2s] new best checkpoint epoch 10 quick PQ 0.3912 sha256 9bf910118242cefec231f56427966d4b01b82b4497ad53044d5d3ce98fae8f23
+[2026-11-13T11:35:47Z + 1502.3s] step 1125/3300 epoch 11 loss 0.2517 (bce 0.0196 dice 0.768) lr 2.32e-04  13.7 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:36:14Z + 1529.5s] step 1150/3300 epoch 11 loss 0.3219 (bce 0.0184 dice 0.697) lr 2.29e-04  14.2 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:36:41Z + 1555.9s] step 1175/3300 epoch 11 loss 0.2940 (bce 0.0143 dice 0.720) lr 2.26e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:37:09Z + 1584.0s] step 1200/3300 epoch 11 loss 0.3020 (bce 0.0196 dice 0.718) lr 2.22e-04  14.4 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2789 MiB, 15360 MiB | 1, Tesla T4, 79 %, 2441 MiB, 15360 MiB
+[2026-11-13T11:37:20Z + 1594.9s] EPOCH 11 done: loss 0.3217, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 122 s, peak GPU mem 7.19 GB
+[2026-11-13T11:37:36Z + 1611.5s] step 1225/3300 epoch 12 loss 0.3261 (bce 0.0186 dice 0.693) lr 2.19e-04  14.4 crops/s  data-wait 3%  gpu: -
+[2026-11-13T11:38:03Z + 1638.3s] step 1250/3300 epoch 12 loss 0.3187 (bce 0.0220 dice 0.703) lr 2.16e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:38:31Z + 1665.8s] step 1275/3300 epoch 12 loss 0.2758 (bce 0.0147 dice 0.739) lr 2.13e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:38:58Z + 1692.8s] step 1300/3300 epoch 12 loss 0.2982 (bce 0.0154 dice 0.717) lr 2.09e-04  14.7 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2567 MiB, 15360 MiB | 1, Tesla T4, 83 %, 2361 MiB, 15360 MiB
+[2026-11-13T11:39:19Z + 1714.4s] EPOCH 12 done: loss 0.3219, 14.7 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:39:26Z + 1720.6s] step 1325/3300 epoch 13 loss 0.3202 (bce 0.0201 dice 0.700) lr 2.06e-04  12.9 crops/s  data-wait 9%  gpu: -
+[2026-11-13T11:39:53Z + 1748.3s] step 1350/3300 epoch 13 loss 0.3620 (bce 0.0213 dice 0.659) lr 2.02e-04  14.2 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:40:20Z + 1775.2s] step 1375/3300 epoch 13 loss 0.3520 (bce 0.0203 dice 0.668) lr 1.99e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:40:47Z + 1802.2s] step 1400/3300 epoch 13 loss 0.3545 (bce 0.0191 dice 0.665) lr 1.95e-04  14.6 crops/s  data-wait 1%  gpu: 0, Tesla T4, 85 %, 2781 MiB, 15360 MiB | 1, Tesla T4, 80 %, 2363 MiB, 15360 MiB
+[2026-11-13T11:41:14Z + 1829.5s] step 1425/3300 epoch 13 loss 0.3319 (bce 0.0240 dice 0.692) lr 1.92e-04  14.6 crops/s  data-wait 0%  gpu: -
+[2026-11-13T11:41:20Z + 1835.0s] EPOCH 13 done: loss 0.3146, 14.6 crops/s (3.7 full work-size images/s), data-wait 0%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T11:41:42Z + 1857.3s] step 1450/3300 epoch 14 loss 0.3325 (bce 0.0205 dice 0.688) lr 1.88e-04  14.3 crops/s  data-wait 3%  gpu: -
+[2026-11-13T11:42:09Z + 1884.4s] step 1475/3300 epoch 14 loss 0.3055 (bce 0.0253 dice 0.720) lr 1.85e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:42:37Z + 1911.6s] step 1500/3300 epoch 14 loss 0.3658 (bce 0.0186 dice 0.653) lr 1.81e-04  14.6 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2917 MiB, 15360 MiB | 1, Tesla T4, 74 %, 2459 MiB, 15360 MiB
+[2026-11-13T11:43:04Z + 1938.8s] step 1525/3300 epoch 14 loss 0.3516 (bce 0.0238 dice 0.672) lr 1.78e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:43:20Z + 1955.1s] EPOCH 14 done: loss 0.3147, 14.7 crops/s (3.7 full work-size images/s), data-wait 0%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:43:32Z + 1966.7s] step 1550/3300 epoch 15 loss 0.2648 (bce 0.0135 dice 0.749) lr 1.74e-04  13.8 crops/s  data-wait 5%  gpu: -
+[2026-11-13T11:43:59Z + 1993.8s] step 1575/3300 epoch 15 loss 0.2652 (bce 0.0210 dice 0.756) lr 1.70e-04  14.5 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:44:26Z + 2021.0s] step 1600/3300 epoch 15 loss 0.3537 (bce 0.0239 dice 0.670) lr 1.67e-04  14.6 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2791 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2457 MiB, 15360 MiB
+[2026-11-13T11:44:53Z + 2048.1s] step 1625/3300 epoch 15 loss 0.3257 (bce 0.0187 dice 0.693) lr 1.63e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:45:20Z + 2075.1s] step 1650/3300 epoch 15 loss 0.2801 (bce 0.0170 dice 0.737) lr 1.60e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:45:20Z + 2075.3s] EPOCH 15 done: loss 0.3082, 14.6 crops/s (3.7 full work-size images/s), data-wait 1%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:46:23Z + 2137.6s] VALIDATION epoch 15 (no TTA, quick grid): (0.5,0.5,512) PQ 0.3882; (0.35,0.7,256) PQ 0.3825; (0.25,0.7,512) PQ 0.3830; (0.15,0.8,1024) PQ 0.3449  -> best 0.3882  [registered baseline 0.2142; stop rule 0.27]; parent peak 11.97 GiB, scoring child peak 1.153 GiB, 62 s
+[2026-11-13T11:46:52Z + 2166.8s] step 1675/3300 epoch 16 loss 0.3293 (bce 0.0168 dice 0.687) lr 1.56e-04  13.7 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:47:19Z + 2194.0s] step 1700/3300 epoch 16 loss 0.2956 (bce 0.0131 dice 0.718) lr 1.52e-04  14.2 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2919 MiB, 15360 MiB | 1, Tesla T4, 86 %, 2363 MiB, 15360 MiB
+[2026-11-13T11:47:45Z + 2220.4s] step 1725/3300 epoch 16 loss 0.2894 (bce 0.0214 dice 0.732) lr 1.49e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:48:13Z + 2248.2s] step 1750/3300 epoch 16 loss 0.2559 (bce 0.0133 dice 0.757) lr 1.45e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:48:24Z + 2259.1s] EPOCH 16 done: loss 0.3107, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 122 s, peak GPU mem 7.19 GB
+[2026-11-13T11:48:41Z + 2275.9s] step 1775/3300 epoch 17 loss 0.3891 (bce 0.0192 dice 0.630) lr 1.41e-04  14.3 crops/s  data-wait 4%  gpu: -
+[2026-11-13T11:49:08Z + 2302.8s] step 1800/3300 epoch 17 loss 0.3515 (bce 0.0162 dice 0.665) lr 1.38e-04  14.7 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2841 MiB, 15360 MiB | 1, Tesla T4, 78 %, 2441 MiB, 15360 MiB
+[2026-11-13T11:49:35Z + 2330.2s] step 1825/3300 epoch 17 loss 0.3549 (bce 0.0221 dice 0.667) lr 1.34e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:50:02Z + 2357.3s] step 1850/3300 epoch 17 loss 0.3604 (bce 0.0199 dice 0.659) lr 1.30e-04  14.7 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:50:24Z + 2379.0s] EPOCH 17 done: loss 0.3063, 14.7 crops/s (3.7 full work-size images/s), data-wait 1%, 120 s, peak GPU mem 7.19 GB
+[2026-11-13T11:50:30Z + 2385.2s] step 1875/3300 epoch 18 loss 0.2948 (bce 0.0187 dice 0.724) lr 1.27e-04  12.8 crops/s  data-wait 12%  gpu: -
+[2026-11-13T11:50:58Z + 2412.6s] step 1900/3300 epoch 18 loss 0.2733 (bce 0.0134 dice 0.740) lr 1.23e-04  14.3 crops/s  data-wait 2%  gpu: 0, Tesla T4, 98 %, 2917 MiB, 15360 MiB | 1, Tesla T4, 77 %, 2441 MiB, 15360 MiB
+[2026-11-13T11:51:25Z + 2439.9s] step 1925/3300 epoch 18 loss 0.2840 (bce 0.0240 dice 0.740) lr 1.20e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:51:52Z + 2467.0s] step 1950/3300 epoch 18 loss 0.3103 (bce 0.0163 dice 0.706) lr 1.16e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:52:19Z + 2494.2s] step 1975/3300 epoch 18 loss 0.2972 (bce 0.0214 dice 0.724) lr 1.12e-04  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:52:25Z + 2499.7s] EPOCH 18 done: loss 0.3030, 14.6 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T11:52:47Z + 2522.4s] step 2000/3300 epoch 19 loss 0.3209 (bce 0.0177 dice 0.697) lr 1.09e-04  14.1 crops/s  data-wait 3%  gpu: 0, Tesla T4, 98 %, 2925 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2441 MiB, 15360 MiB
+[2026-11-13T11:53:15Z + 2549.9s] step 2025/3300 epoch 19 loss 0.2864 (bce 0.0187 dice 0.732) lr 1.05e-04  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:53:42Z + 2577.1s] step 2050/3300 epoch 19 loss 0.2486 (bce 0.0177 dice 0.769) lr 1.02e-04  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:54:09Z + 2604.3s] step 2075/3300 epoch 19 loss 0.3151 (bce 0.0219 dice 0.707) lr 9.86e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:54:26Z + 2620.7s] EPOCH 19 done: loss 0.3038, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T11:54:37Z + 2632.5s] step 2100/3300 epoch 20 loss 0.2949 (bce 0.0186 dice 0.724) lr 9.52e-05  13.7 crops/s  data-wait 6%  gpu: 0, Tesla T4, 99 %, 2579 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2447 MiB, 15360 MiB
+[2026-11-13T11:55:05Z + 2659.7s] step 2125/3300 epoch 20 loss 0.3124 (bce 0.0185 dice 0.706) lr 9.18e-05  14.4 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:55:32Z + 2687.0s] step 2150/3300 epoch 20 loss 0.2511 (bce 0.0140 dice 0.763) lr 8.85e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:55:59Z + 2714.2s] step 2175/3300 epoch 20 loss 0.2602 (bce 0.0182 dice 0.758) lr 8.52e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:56:26Z + 2741.3s] step 2200/3300 epoch 20 loss 0.3131 (bce 0.0208 dice 0.708) lr 8.19e-05  14.6 crops/s  data-wait 1%  gpu: 0, Tesla T4, 97 %, 2785 MiB, 15360 MiB | 1, Tesla T4, 76 %, 2457 MiB, 15360 MiB
+[2026-11-13T11:56:26Z + 2741.5s] EPOCH 20 done: loss 0.2987, 14.6 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T11:57:29Z + 2803.9s] VALIDATION epoch 20 (no TTA, quick grid): (0.5,0.5,512) PQ 0.4043; (0.35,0.7,256) PQ 0.3986; (0.25,0.7,512) PQ 0.3942; (0.15,0.8,1024) PQ 0.3514  -> best 0.4043  [registered baseline 0.2142; stop rule 0.27]; parent peak 11.97 GiB, scoring child peak 1.153 GiB, 62 s
+[2026-11-13T11:57:29Z + 2804.4s] new best checkpoint epoch 20 quick PQ 0.4043 sha256 56c100bb05c84cb7fe9043c5801a70a7bce539793097ccdb6803e89608e9cd63
+[2026-11-13T11:57:59Z + 2833.6s] step 2225/3300 epoch 21 loss 0.2786 (bce 0.0186 dice 0.740) lr 7.87e-05  13.7 crops/s  data-wait 2%  gpu: -
+[2026-11-13T11:58:26Z + 2860.9s] step 2250/3300 epoch 21 loss 0.2895 (bce 0.0191 dice 0.730) lr 7.56e-05  14.2 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:58:52Z + 2887.4s] step 2275/3300 epoch 21 loss 0.2790 (bce 0.0145 dice 0.735) lr 7.24e-05  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T11:59:21Z + 2915.6s] step 2300/3300 epoch 21 loss 0.2712 (bce 0.0136 dice 0.742) lr 6.94e-05  14.4 crops/s  data-wait 1%  gpu: 0, Tesla T4, 100 %, 2567 MiB, 15360 MiB | 1, Tesla T4, 72 %, 2429 MiB, 15360 MiB
+[2026-11-13T11:59:32Z + 2926.6s] EPOCH 21 done: loss 0.2988, 14.4 crops/s (3.6 full work-size images/s), data-wait 1%, 122 s, peak GPU mem 7.19 GB
+[2026-11-13T11:59:48Z + 2943.5s] step 2325/3300 epoch 22 loss 0.3079 (bce 0.0160 dice 0.708) lr 6.64e-05  14.3 crops/s  data-wait 4%  gpu: -
+[2026-11-13T12:00:15Z + 2970.5s] step 2350/3300 epoch 22 loss 0.2443 (bce 0.0189 dice 0.775) lr 6.34e-05  14.6 crops/s  data-wait 2%  gpu: -
+[2026-11-13T12:00:43Z + 2998.2s] step 2375/3300 epoch 22 loss 0.3174 (bce 0.0199 dice 0.703) lr 6.05e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:01:10Z + 3025.4s] step 2400/3300 epoch 22 loss 0.2795 (bce 0.0169 dice 0.737) lr 5.76e-05  14.6 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2921 MiB, 15360 MiB | 1, Tesla T4, 84 %, 2429 MiB, 15360 MiB
+[2026-11-13T12:01:32Z + 3047.2s] EPOCH 22 done: loss 0.2951, 14.6 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:01:38Z + 3053.5s] step 2425/3300 epoch 23 loss 0.3186 (bce 0.0230 dice 0.704) lr 5.48e-05  12.6 crops/s  data-wait 12%  gpu: -
+[2026-11-13T12:02:06Z + 3080.9s] step 2450/3300 epoch 23 loss 0.2687 (bce 0.0164 dice 0.748) lr 5.21e-05  14.2 crops/s  data-wait 2%  gpu: -
+[2026-11-13T12:02:33Z + 3108.3s] step 2475/3300 epoch 23 loss 0.2420 (bce 0.0182 dice 0.776) lr 4.94e-05  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:03:00Z + 3135.4s] step 2500/3300 epoch 23 loss 0.2724 (bce 0.0147 dice 0.742) lr 4.68e-05  14.5 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2579 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2457 MiB, 15360 MiB
+[2026-11-13T12:03:27Z + 3162.5s] step 2525/3300 epoch 23 loss 0.2343 (bce 0.0180 dice 0.784) lr 4.42e-05  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:03:33Z + 3168.0s] EPOCH 23 done: loss 0.2906, 14.6 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:03:56Z + 3190.8s] step 2550/3300 epoch 24 loss 0.2332 (bce 0.0184 dice 0.785) lr 4.17e-05  14.0 crops/s  data-wait 3%  gpu: -
+[2026-11-13T12:04:23Z + 3218.0s] step 2575/3300 epoch 24 loss 0.3030 (bce 0.0168 dice 0.714) lr 3.93e-05  14.4 crops/s  data-wait 2%  gpu: -
+[2026-11-13T12:04:50Z + 3245.4s] step 2600/3300 epoch 24 loss 0.4117 (bce 0.0272 dice 0.615) lr 3.69e-05  14.5 crops/s  data-wait 1%  gpu: 0, Tesla T4, 97 %, 2815 MiB, 15360 MiB | 1, Tesla T4, 80 %, 2441 MiB, 15360 MiB
+[2026-11-13T12:05:18Z + 3272.8s] step 2625/3300 epoch 24 loss 0.3108 (bce 0.0139 dice 0.703) lr 3.46e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:05:34Z + 3289.3s] EPOCH 24 done: loss 0.2975, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:05:46Z + 3301.0s] step 2650/3300 epoch 25 loss 0.2504 (bce 0.0153 dice 0.765) lr 3.24e-05  13.7 crops/s  data-wait 6%  gpu: -
+[2026-11-13T12:06:13Z + 3328.3s] step 2675/3300 epoch 25 loss 0.2901 (bce 0.0200 dice 0.730) lr 3.03e-05  14.3 crops/s  data-wait 2%  gpu: -
+[2026-11-13T12:06:41Z + 3355.8s] step 2700/3300 epoch 25 loss 0.2885 (bce 0.0177 dice 0.729) lr 2.82e-05  14.4 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2569 MiB, 15360 MiB | 1, Tesla T4, 84 %, 2363 MiB, 15360 MiB
+[2026-11-13T12:07:08Z + 3382.9s] step 2725/3300 epoch 25 loss 0.2875 (bce 0.0150 dice 0.728) lr 2.62e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:07:35Z + 3410.0s] step 2750/3300 epoch 25 loss 0.2886 (bce 0.0192 dice 0.731) lr 2.43e-05  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:07:35Z + 3410.2s] EPOCH 25 done: loss 0.2879, 14.6 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:08:35Z + 3470.1s] VALIDATION epoch 25 (no TTA, quick grid): (0.5,0.5,512) PQ 0.4038; (0.35,0.7,256) PQ 0.3981; (0.25,0.7,512) PQ 0.3943; (0.15,0.8,1024) PQ 0.3526  -> best 0.4038  [registered baseline 0.2142; stop rule 0.27]; parent peak 12.09 GiB, scoring child peak 1.153 GiB, 60 s
+[2026-11-13T12:09:04Z + 3499.5s] step 2775/3300 epoch 26 loss 0.2823 (bce 0.0232 dice 0.741) lr 2.24e-05  13.6 crops/s  data-wait 3%  gpu: -
+[2026-11-13T12:09:32Z + 3526.9s] step 2800/3300 epoch 26 loss 0.2872 (bce 0.0180 dice 0.731) lr 2.06e-05  14.1 crops/s  data-wait 1%  gpu: 0, Tesla T4, 99 %, 2563 MiB, 15360 MiB | 1, Tesla T4, 75 %, 2427 MiB, 15360 MiB
+[2026-11-13T12:09:58Z + 3553.3s] step 2825/3300 epoch 26 loss 0.2456 (bce 0.0146 dice 0.769) lr 1.90e-05  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:10:26Z + 3581.4s] step 2850/3300 epoch 26 loss 0.2917 (bce 0.0213 dice 0.730) lr 1.73e-05  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:10:37Z + 3592.4s] EPOCH 26 done: loss 0.2911, 14.4 crops/s (3.6 full work-size images/s), data-wait 1%, 122 s, peak GPU mem 7.19 GB
+[2026-11-13T12:10:54Z + 3609.3s] step 2875/3300 epoch 27 loss 0.3048 (bce 0.0174 dice 0.713) lr 1.58e-05  14.2 crops/s  data-wait 4%  gpu: -
+[2026-11-13T12:11:21Z + 3636.4s] step 2900/3300 epoch 27 loss 0.3720 (bce 0.0321 dice 0.660) lr 1.44e-05  14.6 crops/s  data-wait 2%  gpu: 0, Tesla T4, 93 %, 2567 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2433 MiB, 15360 MiB
+[2026-11-13T12:11:49Z + 3664.0s] step 2925/3300 epoch 27 loss 0.2989 (bce 0.0205 dice 0.722) lr 1.30e-05  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:12:16Z + 3691.1s] step 2950/3300 epoch 27 loss 0.2877 (bce 0.0153 dice 0.728) lr 1.17e-05  14.6 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:12:38Z + 3712.9s] EPOCH 27 done: loss 0.2956, 14.6 crops/s (3.7 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:12:44Z + 3719.3s] step 2975/3300 epoch 28 loss 0.2681 (bce 0.0137 dice 0.746) lr 1.05e-05  12.5 crops/s  data-wait 13%  gpu: -
+[2026-11-13T12:13:12Z + 3746.8s] step 3000/3300 epoch 28 loss 0.3018 (bce 0.0167 dice 0.715) lr 9.43e-06  14.2 crops/s  data-wait 2%  gpu: 0, Tesla T4, 98 %, 2563 MiB, 15360 MiB | 1, Tesla T4, 73 %, 2429 MiB, 15360 MiB
+[2026-11-13T12:13:39Z + 3774.0s] step 3025/3300 epoch 28 loss 0.3066 (bce 0.0211 dice 0.715) lr 8.41e-06  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:14:06Z + 3801.3s] step 3050/3300 epoch 28 loss 0.3407 (bce 0.0187 dice 0.678) lr 7.48e-06  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:14:33Z + 3828.5s] step 3075/3300 epoch 28 loss 0.3394 (bce 0.0239 dice 0.684) lr 6.63e-06  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:14:39Z + 3834.0s] EPOCH 28 done: loss 0.2926, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:15:02Z + 3856.9s] step 3100/3300 epoch 29 loss 0.2619 (bce 0.0183 dice 0.756) lr 5.87e-06  14.0 crops/s  data-wait 4%  gpu: 0, Tesla T4, 97 %, 2899 MiB, 15360 MiB | 1, Tesla T4, 86 %, 2363 MiB, 15360 MiB
+[2026-11-13T12:15:29Z + 3884.3s] step 3125/3300 epoch 29 loss 0.3359 (bce 0.0162 dice 0.680) lr 5.20e-06  14.3 crops/s  data-wait 2%  gpu: -
+[2026-11-13T12:15:57Z + 3911.7s] step 3150/3300 epoch 29 loss 0.3109 (bce 0.0143 dice 0.703) lr 4.62e-06  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:16:24Z + 3939.1s] step 3175/3300 epoch 29 loss 0.2819 (bce 0.0145 dice 0.733) lr 4.12e-06  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:16:40Z + 3955.5s] EPOCH 29 done: loss 0.2948, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 122 s, peak GPU mem 7.19 GB
+[2026-11-13T12:16:52Z + 3967.4s] step 3200/3300 epoch 30 loss 0.3048 (bce 0.0180 dice 0.713) lr 3.72e-06  13.6 crops/s  data-wait 5%  gpu: 0, Tesla T4, 99 %, 2561 MiB, 15360 MiB | 1, Tesla T4, 81 %, 2441 MiB, 15360 MiB
+[2026-11-13T12:17:20Z + 3994.7s] step 3225/3300 epoch 30 loss 0.2870 (bce 0.0187 dice 0.732) lr 3.40e-06  14.3 crops/s  data-wait 2%  gpu: -
+[2026-11-13T12:17:47Z + 4022.1s] step 3250/3300 epoch 30 loss 0.2981 (bce 0.0107 dice 0.713) lr 3.18e-06  14.4 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:18:14Z + 4049.4s] step 3275/3300 epoch 30 loss 0.2771 (bce 0.0164 dice 0.739) lr 3.05e-06  14.5 crops/s  data-wait 1%  gpu: -
+[2026-11-13T12:18:41Z + 4076.5s] step 3300/3300 epoch 30 loss 0.3207 (bce 0.0188 dice 0.698) lr 3.00e-06  14.5 crops/s  data-wait 1%  gpu: 0, Tesla T4, 98 %, 2921 MiB, 15360 MiB | 1, Tesla T4, 80 %, 2449 MiB, 15360 MiB
+[2026-11-13T12:18:42Z + 4076.7s] EPOCH 30 done: loss 0.2905, 14.5 crops/s (3.6 full work-size images/s), data-wait 1%, 121 s, peak GPU mem 7.19 GB
+[2026-11-13T12:19:42Z + 4137.5s] VALIDATION epoch 30 (no TTA, quick grid): (0.5,0.5,512) PQ 0.4109; (0.35,0.7,256) PQ 0.4102; (0.25,0.7,512) PQ 0.4031; (0.15,0.8,1024) PQ 0.3654  -> best 0.4109  [registered baseline 0.2142; stop rule 0.27]; parent peak 12.73 GiB, scoring child peak 1.153 GiB, 61 s
+[2026-11-13T12:19:43Z + 4137.9s] new best checkpoint epoch 30 quick PQ 0.4109 sha256 492d96619b865d1ff4c29a4dee99e33feea670f4012f456c2666b0f55e3e51ba
+[2026-11-13T12:19:43Z + 4137.9s] training finished: 30 epochs, 3300 steps, 4001 s; best epoch 30 quick PQ 0.4109
+[2026-11-13T12:20:14Z + 4169.1s] validation maps written (141, TTA True) in 31 s
+[2026-11-13T12:32:43Z + 4917.7s] ####################################################################################################
+[2026-11-13T12:32:43Z + 4917.7s] ####################################################################################################
+[2026-11-13T12:32:43Z + 4917.7s] ####################################################################################################
+[2026-11-13T12:32:43Z + 4917.7s] #### STOP RULE PASSED: validation PQ 0.4232 (CV 0.4232) >= 0.27, verdict CONTINUE. Rule [0.5, 0.85, 256, 0.9]. Submitting still needs review, the registered revision and the owner's go-ahead.
+[2026-11-13T12:32:43Z + 4917.7s] ####################################################################################################
+[2026-11-13T12:32:43Z + 4917.7s] ####################################################################################################
+[2026-11-13T12:32:43Z + 4917.7s] ####################################################################################################
+[2026-11-13T12:32:47Z + 4922.0s] TEST-PATH SELF-CHECK on 2 validation images (strict batch identity: True): [(12, 0, 1, 378), (18, 0, 1, 353)]
+[2026-11-13T12:35:01Z + 5055.9s] test inference: 180 images, 1477 rows in 132 s
+[2026-11-13T12:36:48Z + 5163.3s] submission written: submission.csv (1477 rows) sha256 45eb4079bf0383ef315bb5d5274b9672afbd5d32195978ffc565215f3fefd3bf; validator {"images_with_rows": 178, "images_without_rows": 2, "instances": 1477, "official_images": 180, "ok": true, "overlap": 0, "rows": 1477}
+[2026-11-13T12:36:48Z + 5163.4s] DONE status COMPLETE in 5163 s. This kernel never submits.

@@ -1,0 +1,811 @@
+{
+ "best_epoch": 30,
+ "chosen": {
+  "A": 256,
+  "T_high": 0.85,
+  "T_low": 0.5,
+  "fn": 590,
+  "fp": 696,
+  "limb": 0.9,
+  "matched_iou_sum": 725.8207719326019,
+  "pq": 0.4232191089986017,
+  "rq": 0.6250728862973761,
+  "sq": 0.6770716156087705,
+  "status": "SCORED",
+  "tp": 1072
+ },
+ "cv": {
+  "chosen_per_fold": {
+   "0": [
+    0.5,
+    0.85,
+    256,
+    0.9
+   ],
+   "1": [
+    0.5,
+    0.85,
+    256,
+    0.9
+   ],
+   "2": [
+    0.5,
+    0.85,
+    256,
+    0.9
+   ],
+   "3": [
+    0.5,
+    0.85,
+    256,
+    0.9
+   ],
+   "4": [
+    0.5,
+    0.85,
+    256,
+    0.9
+   ]
+  },
+  "cv": {
+   "fn": 590,
+   "fp": 696,
+   "matched_iou_sum": 725.8207719326019,
+   "pq": 0.4232191089986017,
+   "tp": 1072
+  }
+ },
+ "holdout_scored": false,
+ "periodic_evals": [
+  {
+   "best_quick_pq": 0.364105303254146,
+   "complete": true,
+   "elapsed": 809.3516230583191,
+   "epoch": 5,
+   "kind": "eval",
+   "not_scoreable": null,
+   "quick_rows": [
+    {
+     "A": 512,
+     "T_high": 0.5,
+     "T_low": 0.5,
+     "fn": 738,
+     "fp": 773,
+     "limb": null,
+     "matched_iou_sum": 611.5148568153381,
+     "pq": 0.364105303254146,
+     "rq": 0.5501637392080977,
+     "sq": 0.6618126156010153,
+     "status": "SCORED",
+     "tp": 924
+    },
+    {
+     "A": 256,
+     "T_high": 0.7,
+     "T_low": 0.35,
+     "fn": 635,
+     "fp": 1257,
+     "limb": null,
+     "matched_iou_sum": 670.5196552276611,
+     "pq": 0.3398477725431633,
+     "rq": 0.5205271160669032,
+     "sq": 0.6528915825001569,
+     "status": "SCORED",
+     "tp": 1027
+    },
+    {
+     "A": 512,
+     "T_high": 0.7,
+     "T_low": 0.25,
+     "fn": 727,
+     "fp": 914,
+     "limb": null,
+     "matched_iou_sum": 606.4247622489929,
+     "pq": 0.3454427583303862,
+     "rq": 0.5326117915123897,
+     "sq": 0.6485826334213828,
+     "status": "SCORED",
+     "tp": 935
+    },
+    {
+     "A": 1024,
+     "T_high": 0.8,
+     "T_low": 0.15,
+     "fn": 919,
+     "fp": 569,
+     "limb": null,
+     "matched_iou_sum": 477.0499327778816,
+     "pq": 0.32081367369057273,
+     "rq": 0.4996637525218561,
+     "sq": 0.6420591289069739,
+     "status": "SCORED",
+     "tp": 743
+    }
+   ],
+   "scoreable": true,
+   "scoring": {
+    "child_peak_rss_bytes": 1221120000,
+    "child_peak_rss_max_gib": 1.1372566223144531,
+    "child_start": [
+     {
+      "import_s": 3.489077091217041,
+      "pid": 20,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.483506441116333,
+      "pid": 21,
+      "ready_maxrss_gib": 0.5491600036621094,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.463416576385498,
+      "pid": 22,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.4848978519439697,
+      "pid": 23,
+      "ready_maxrss_gib": 0.5496368408203125,
+      "start_maxrss_gib": 0.545745849609375
+     }
+    ],
+    "done": 34,
+    "mode": "subprocess",
+    "parent_peak_rss_gib": 11.974895477294922,
+    "refused": {},
+    "seconds": 55.649641275405884,
+    "soft": [
+     "MASK_COUNT_BUDGET",
+     "PAIR_COUNT_BUDGET"
+    ],
+    "task_seconds_max": 22.318942070007324,
+    "tasks": 34
+   },
+   "seconds": 68.47664856910706,
+   "step": 550
+  },
+  {
+   "best_quick_pq": 0.39121915582095734,
+   "complete": true,
+   "elapsed": 1472.7429177761078,
+   "epoch": 10,
+   "kind": "eval",
+   "not_scoreable": null,
+   "quick_rows": [
+    {
+     "A": 512,
+     "T_high": 0.5,
+     "T_low": 0.5,
+     "fn": 739,
+     "fp": 566,
+     "limb": null,
+     "matched_iou_sum": 616.3657799959183,
+     "pq": 0.39121915582095734,
+     "rq": 0.585845763249762,
+     "sq": 0.667785243765892,
+     "status": "SCORED",
+     "tp": 923
+    },
+    {
+     "A": 256,
+     "T_high": 0.7,
+     "T_low": 0.35,
+     "fn": 625,
+     "fp": 942,
+     "limb": null,
+     "matched_iou_sum": 684.874707877636,
+     "pq": 0.3762014325062543,
+     "rq": 0.5696237297445756,
+     "sq": 0.6604384839707194,
+     "status": "SCORED",
+     "tp": 1037
+    },
+    {
+     "A": 512,
+     "T_high": 0.7,
+     "T_low": 0.25,
+     "fn": 715,
+     "fp": 669,
+     "limb": null,
+     "matched_iou_sum": 621.3312236070633,
+     "pq": 0.3790916556479947,
+     "rq": 0.577791336180598,
+     "sq": 0.656104776776202,
+     "status": "SCORED",
+     "tp": 947
+    },
+    {
+     "A": 1024,
+     "T_high": 0.8,
+     "T_low": 0.15,
+     "fn": 903,
+     "fp": 424,
+     "limb": null,
+     "matched_iou_sum": 493.20324724912643,
+     "pq": 0.34671581528936835,
+     "rq": 0.533567662565905,
+     "sq": 0.6498066498670968,
+     "status": "SCORED",
+     "tp": 759
+    }
+   ],
+   "scoreable": true,
+   "scoring": {
+    "child_peak_rss_bytes": 1225707520,
+    "child_peak_rss_max_gib": 1.1415290832519531,
+    "child_start": [
+     {
+      "import_s": 3.489077091217041,
+      "pid": 20,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.483506441116333,
+      "pid": 21,
+      "ready_maxrss_gib": 0.5491600036621094,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.463416576385498,
+      "pid": 22,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.4848978519439697,
+      "pid": 23,
+      "ready_maxrss_gib": 0.5496368408203125,
+      "start_maxrss_gib": 0.545745849609375
+     }
+    ],
+    "done": 34,
+    "mode": "subprocess",
+    "parent_peak_rss_gib": 11.974895477294922,
+    "refused": {},
+    "seconds": 50.73151350021362,
+    "soft": [
+     "MASK_COUNT_BUDGET",
+     "PAIR_COUNT_BUDGET"
+    ],
+    "task_seconds_max": 19.450881242752075,
+    "tasks": 34
+   },
+   "seconds": 61.55449819564819,
+   "step": 1100
+  },
+  {
+   "best_quick_pq": 0.38819468664476225,
+   "complete": true,
+   "elapsed": 2137.619283914566,
+   "epoch": 15,
+   "kind": "eval",
+   "not_scoreable": null,
+   "quick_rows": [
+    {
+     "A": 512,
+     "T_high": 0.5,
+     "T_low": 0.5,
+     "fn": 729,
+     "fp": 649,
+     "limb": null,
+     "matched_iou_sum": 629.6517817378044,
+     "pq": 0.38819468664476225,
+     "rq": 0.5752157829839704,
+     "sq": 0.6748679332666714,
+     "status": "SCORED",
+     "tp": 933
+    },
+    {
+     "A": 256,
+     "T_high": 0.7,
+     "T_low": 0.35,
+     "fn": 584,
+     "fp": 1029,
+     "limb": null,
+     "matched_iou_sum": 720.7438983917236,
+     "pq": 0.3824589537764519,
+     "rq": 0.5720350225524011,
+     "sq": 0.6685935977659774,
+     "status": "SCORED",
+     "tp": 1078
+    },
+    {
+     "A": 512,
+     "T_high": 0.7,
+     "T_low": 0.25,
+     "fn": 691,
+     "fp": 743,
+     "limb": null,
+     "matched_iou_sum": 646.5239236354828,
+     "pq": 0.38301180310158933,
+     "rq": 0.5752369668246445,
+     "sq": 0.6658330830437516,
+     "status": "SCORED",
+     "tp": 971
+    },
+    {
+     "A": 1024,
+     "T_high": 0.8,
+     "T_low": 0.15,
+     "fn": 907,
+     "fp": 471,
+     "limb": null,
+     "matched_iou_sum": 498.0477845668793,
+     "pq": 0.34490843806570587,
+     "rq": 0.5228531855955678,
+     "sq": 0.6596659398236812,
+     "status": "SCORED",
+     "tp": 755
+    }
+   ],
+   "scoreable": true,
+   "scoring": {
+    "child_peak_rss_bytes": 1238020096,
+    "child_peak_rss_max_gib": 1.1529960632324219,
+    "child_start": [
+     {
+      "import_s": 3.489077091217041,
+      "pid": 20,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.483506441116333,
+      "pid": 21,
+      "ready_maxrss_gib": 0.5491600036621094,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.463416576385498,
+      "pid": 22,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.4848978519439697,
+      "pid": 23,
+      "ready_maxrss_gib": 0.5496368408203125,
+      "start_maxrss_gib": 0.545745849609375
+     }
+    ],
+    "done": 34,
+    "mode": "subprocess",
+    "parent_peak_rss_gib": 11.974895477294922,
+    "refused": {},
+    "seconds": 51.38033437728882,
+    "soft": [
+     "MASK_COUNT_BUDGET",
+     "PAIR_COUNT_BUDGET"
+    ],
+    "task_seconds_max": 19.488957166671753,
+    "tasks": 34
+   },
+   "seconds": 62.35984802246094,
+   "step": 1650
+  },
+  {
+   "best_quick_pq": 0.4042902865965228,
+   "complete": true,
+   "elapsed": 2803.9384329319,
+   "epoch": 20,
+   "kind": "eval",
+   "not_scoreable": null,
+   "quick_rows": [
+    {
+     "A": 512,
+     "T_high": 0.5,
+     "T_low": 0.5,
+     "fn": 715,
+     "fp": 542,
+     "limb": null,
+     "matched_iou_sum": 636.9593465328217,
+     "pq": 0.4042902865965228,
+     "rq": 0.6010790225325293,
+     "sq": 0.6726075464971718,
+     "status": "SCORED",
+     "tp": 947
+    },
+    {
+     "A": 256,
+     "T_high": 0.7,
+     "T_low": 0.35,
+     "fn": 588,
+     "fp": 847,
+     "limb": null,
+     "matched_iou_sum": 714.1207812428474,
+     "pq": 0.39861612126310214,
+     "rq": 0.5994976276862964,
+     "sq": 0.6649169285315153,
+     "status": "SCORED",
+     "tp": 1074
+    },
+    {
+     "A": 512,
+     "T_high": 0.7,
+     "T_low": 0.25,
+     "fn": 681,
+     "fp": 642,
+     "limb": null,
+     "matched_iou_sum": 647.4721542000771,
+     "pq": 0.3941991806393163,
+     "rq": 0.5972602739726027,
+     "sq": 0.6600123896025251,
+     "status": "SCORED",
+     "tp": 981
+    },
+    {
+     "A": 1024,
+     "T_high": 0.8,
+     "T_low": 0.15,
+     "fn": 894,
+     "fp": 429,
+     "limb": null,
+     "matched_iou_sum": 502.31796246767044,
+     "pq": 0.3513941675184823,
+     "rq": 0.5372507869884575,
+     "sq": 0.6540598469631126,
+     "status": "SCORED",
+     "tp": 768
+    }
+   ],
+   "scoreable": true,
+   "scoring": {
+    "child_peak_rss_bytes": 1238020096,
+    "child_peak_rss_max_gib": 1.1529960632324219,
+    "child_start": [
+     {
+      "import_s": 3.489077091217041,
+      "pid": 20,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.483506441116333,
+      "pid": 21,
+      "ready_maxrss_gib": 0.5491600036621094,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.463416576385498,
+      "pid": 22,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.4848978519439697,
+      "pid": 23,
+      "ready_maxrss_gib": 0.5496368408203125,
+      "start_maxrss_gib": 0.545745849609375
+     }
+    ],
+    "done": 34,
+    "mode": "subprocess",
+    "parent_peak_rss_gib": 11.974895477294922,
+    "refused": {},
+    "seconds": 51.54001426696777,
+    "soft": [
+     "MASK_COUNT_BUDGET",
+     "PAIR_COUNT_BUDGET"
+    ],
+    "task_seconds_max": 19.79089093208313,
+    "tasks": 34
+   },
+   "seconds": 62.483484983444214,
+   "step": 2200
+  },
+  {
+   "best_quick_pq": 0.40382749170886545,
+   "complete": true,
+   "elapsed": 3470.120306968689,
+   "epoch": 25,
+   "kind": "eval",
+   "not_scoreable": null,
+   "quick_rows": [
+    {
+     "A": 512,
+     "T_high": 0.5,
+     "T_low": 0.5,
+     "fn": 704,
+     "fp": 572,
+     "limb": null,
+     "matched_iou_sum": 644.5086767673492,
+     "pq": 0.40382749170886545,
+     "rq": 0.600250626566416,
+     "sq": 0.6727647982957716,
+     "status": "SCORED",
+     "tp": 958
+    },
+    {
+     "A": 256,
+     "T_high": 0.7,
+     "T_low": 0.35,
+     "fn": 590,
+     "fp": 850,
+     "limb": null,
+     "matched_iou_sum": 713.4014621973038,
+     "pq": 0.3981034945297454,
+     "rq": 0.5982142857142857,
+     "sq": 0.6654864386168878,
+     "status": "SCORED",
+     "tp": 1072
+    },
+    {
+     "A": 512,
+     "T_high": 0.7,
+     "T_low": 0.25,
+     "fn": 674,
+     "fp": 660,
+     "limb": null,
+     "matched_iou_sum": 652.5336854457855,
+     "pq": 0.39428017247479485,
+     "rq": 0.5969788519637462,
+     "sq": 0.6604591957953295,
+     "status": "SCORED",
+     "tp": 988
+    },
+    {
+     "A": 1024,
+     "T_high": 0.8,
+     "T_low": 0.15,
+     "fn": 886,
+     "fp": 442,
+     "limb": null,
+     "matched_iou_sum": 507.6783614754677,
+     "pq": 0.35255441769129703,
+     "rq": 0.5388888888888889,
+     "sq": 0.6542246926230254,
+     "status": "SCORED",
+     "tp": 776
+    }
+   ],
+   "scoreable": true,
+   "scoring": {
+    "child_peak_rss_bytes": 1238286336,
+    "child_peak_rss_max_gib": 1.1532440185546875,
+    "child_start": [
+     {
+      "import_s": 3.489077091217041,
+      "pid": 20,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.483506441116333,
+      "pid": 21,
+      "ready_maxrss_gib": 0.5491600036621094,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.463416576385498,
+      "pid": 22,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.4848978519439697,
+      "pid": 23,
+      "ready_maxrss_gib": 0.5496368408203125,
+      "start_maxrss_gib": 0.545745849609375
+     }
+    ],
+    "done": 34,
+    "mode": "subprocess",
+    "parent_peak_rss_gib": 12.093990325927734,
+    "refused": {},
+    "seconds": 48.913304805755615,
+    "soft": [
+     "MASK_COUNT_BUDGET",
+     "PAIR_COUNT_BUDGET"
+    ],
+    "task_seconds_max": 19.604928731918335,
+    "tasks": 34
+   },
+   "seconds": 59.89652180671692,
+   "step": 2750
+  },
+  {
+   "best_quick_pq": 0.41086353367315853,
+   "complete": true,
+   "elapsed": 4137.462543010712,
+   "epoch": 30,
+   "kind": "eval",
+   "not_scoreable": null,
+   "quick_rows": [
+    {
+     "A": 512,
+     "T_high": 0.5,
+     "T_low": 0.5,
+     "fn": 710,
+     "fp": 518,
+     "limb": null,
+     "matched_iou_sum": 643.4122937321663,
+     "pq": 0.41086353367315853,
+     "rq": 0.6079182630906769,
+     "sq": 0.6758532497186621,
+     "status": "SCORED",
+     "tp": 952
+    },
+    {
+     "A": 256,
+     "T_high": 0.7,
+     "T_low": 0.35,
+     "fn": 573,
+     "fp": 806,
+     "limb": null,
+     "matched_iou_sum": 729.4827395677567,
+     "pq": 0.41016741049634897,
+     "rq": 0.6123137475400618,
+     "sq": 0.6698647746260392,
+     "status": "SCORED",
+     "tp": 1089
+    },
+    {
+     "A": 512,
+     "T_high": 0.7,
+     "T_low": 0.25,
+     "fn": 675,
+     "fp": 621,
+     "limb": null,
+     "matched_iou_sum": 659.037676692009,
+     "pq": 0.4030811478238587,
+     "rq": 0.6036697247706422,
+     "sq": 0.6677180108328359,
+     "status": "SCORED",
+     "tp": 987
+    },
+    {
+     "A": 1024,
+     "T_high": 0.8,
+     "T_low": 0.15,
+     "fn": 879,
+     "fp": 387,
+     "limb": null,
+     "matched_iou_sum": 517.3961395025253,
+     "pq": 0.3653927538859642,
+     "rq": 0.5529661016949152,
+     "sq": 0.6607868959163797,
+     "status": "SCORED",
+     "tp": 783
+    }
+   ],
+   "scoreable": true,
+   "scoring": {
+    "child_peak_rss_bytes": 1238286336,
+    "child_peak_rss_max_gib": 1.1532440185546875,
+    "child_start": [
+     {
+      "import_s": 3.489077091217041,
+      "pid": 20,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.483506441116333,
+      "pid": 21,
+      "ready_maxrss_gib": 0.5491600036621094,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.463416576385498,
+      "pid": 22,
+      "ready_maxrss_gib": 0.545745849609375,
+      "start_maxrss_gib": 0.545745849609375
+     },
+     {
+      "import_s": 3.4848978519439697,
+      "pid": 23,
+      "ready_maxrss_gib": 0.5496368408203125,
+      "start_maxrss_gib": 0.545745849609375
+     }
+    ],
+    "done": 34,
+    "mode": "subprocess",
+    "parent_peak_rss_gib": 12.727958679199219,
+    "refused": {},
+    "seconds": 49.752525329589844,
+    "soft": [
+     "MASK_COUNT_BUDGET",
+     "PAIR_COUNT_BUDGET"
+    ],
+    "task_seconds_max": 20.12105679512024,
+    "tasks": 34
+   },
+   "seconds": 60.72308969497681,
+   "step": 3300
+  }
+ ],
+ "pooled_area512": {
+  "fn": 700,
+  "fp": 489,
+  "pq": 0.41969410185257877,
+  "tp": 962
+ },
+ "registered_rule_0.15_0.8_1024": {
+  "A": 1024,
+  "T_high": 0.8,
+  "T_low": 0.15,
+  "fn": 861,
+  "fp": 374,
+  "limb": null,
+  "matched_iou_sum": 529.5630900859833,
+  "pq": 0.3733261121508518,
+  "rq": 0.5646810010574551,
+  "sq": 0.6611274532908655,
+  "status": "SCORED",
+  "tp": 801
+ },
+ "schema": "qmai.solar-track2-r3/v1.score",
+ "scoring_preflight": {
+  "child_peak_rss_max_gib": 0.72259521484375,
+  "child_start": [
+   {
+    "import_s": 3.489077091217041,
+    "pid": 20,
+    "ready_maxrss_gib": 0.545745849609375,
+    "start_maxrss_gib": 0.545745849609375
+   },
+   {
+    "import_s": 3.483506441116333,
+    "pid": 21,
+    "ready_maxrss_gib": 0.5491600036621094,
+    "start_maxrss_gib": 0.545745849609375
+   },
+   {
+    "import_s": 3.463416576385498,
+    "pid": 22,
+    "ready_maxrss_gib": 0.545745849609375,
+    "start_maxrss_gib": 0.545745849609375
+   },
+   {
+    "import_s": 3.4848978519439697,
+    "pid": 23,
+    "ready_maxrss_gib": 0.5496368408203125,
+    "start_maxrss_gib": 0.545745849609375
+   }
+  ],
+  "child_start_seconds": [
+   3.489077091217041,
+   3.483506441116333,
+   3.463416576385498,
+   3.4848978519439697
+  ],
+  "component": 11,
+  "gt_rows": 178,
+  "images": 7,
+  "mode": "subprocess",
+  "oracle_union_map": {
+   "fn": 33,
+   "fp": 47,
+   "matched_iou_sum": 116.5625541806221,
+   "pq": 0.6300678604357951,
+   "tp": 145
+  },
+  "parent_peak_rss_gib": 11.974895477294922,
+  "seconds": 5.926712274551392,
+  "zero_map": {
+   "fn": 178,
+   "fp": 0,
+   "matched_iou_sum": 0.0,
+   "pq": 0.0,
+   "tp": 0
+  }
+ },
+ "status": "COMPLETE_VALIDATION_UNACCEPTED",
+ "test_inference": false,
+ "train": {
+  "crops_per_s_last_epoch": 14.520632573688914,
+  "data_wait_last_epoch": 0.005520274558827238,
+  "max_gpu_mem_gb": 7.1916046142578125,
+  "train_seconds": 4001.212853908539
+ },
+ "val_maps_index_sha256": "e17a3701f96d0d4651d94bb75ba303fbc8b796db5c91ff61b5f8eef58f5d7dd6",
+ "weights": {
+  "file": "checkpoints/best.pt",
+  "sha256": "492d96619b865d1ff4c29a4dee99e33feea670f4012f456c2666b0f55e3e51ba"
+ },
+ "weights_sha256": "492d96619b865d1ff4c29a4dee99e33feea670f4012f456c2666b0f55e3e51ba"
+}

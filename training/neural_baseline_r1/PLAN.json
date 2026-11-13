@@ -1,0 +1,90 @@
+{
+  "allocation_seconds": 3600,
+  "annotation_sha256": "5da9e92b5a1a1947fd5d57adb6688269625c48ec1ef884daf2a01618c9ed54a1",
+  "augmentation": [
+    "paired rotations0/90/180/270",
+    "paired horizontal reflection"
+  ],
+  "batch_size": 4,
+  "crop_pixels": 512,
+  "device_peak_allocated_bytes": 12884901888,
+  "exposure": "Shared training annotation JSON is parsed; only train masks converted for gradients and fixed validation component masks converted for scoring; no holdout photo access or polygon conversion.",
+  "gpu_qualified": false,
+  "host_rss_bytes": 2147483648,
+  "inference": {
+    "area_filter": false,
+    "combine": "mean probabilities before threshold",
+    "connectivity": 8,
+    "foreground_threshold_inclusive": 0.5,
+    "maximum_instances": 512,
+    "stride": 384,
+    "tile": 512,
+    "truncation": false
+  },
+  "input_pins": {
+    "DATA_HASHES.json": "a9b7e9859ce208db60a6231b06eba089890654219c7ff0347a23962774308ffe",
+    "SCORER_FINDINGS.json": "b36137a7b4902bd1aa0f5b3c8791adfd3b4e581df20875cfc9aa14fd71ad3d04",
+    "evaluation-split-r1/PIXEL_CENSUS.json": "32b05e2ba7fc255dfd3fa8d43323eed51432e646b7396a077aeb557c209af5c4",
+    "evaluation-split-r1/SPLIT_PLAN.json": "27e3f1056120c6f96ec38d141b6add66a98fdb5daa014c5f67fd558133b515cc",
+    "official_scorer.py": "ab1cc26f86f76293d6760cb3f076b4800d607f4a2c39772e2c8e38d6b7b43a0a",
+    "score_reference.py": "c6cf51893ab69045d9b37f479a325275c9c752229eea4800c1ff200f242bccd8"
+  },
+  "loss": "BCEWithLogits + soft Dice with smoothing1, equal coefficients",
+  "model": {
+    "architecture": "grayscale U-Net",
+    "channels": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "decoder": "bilinear align_corners=False",
+    "initialization": "from scratch",
+    "normalization": "GroupNorm8",
+    "parameter_limit_exclusive": 3000000,
+    "pretrained_weights": false
+  },
+  "numeric_threads": 1,
+  "optimizer": {
+    "learning_rate": 0.001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "output_bytes": 536870912,
+  "partition_counts": {
+    "holdout": 123,
+    "train": 443,
+    "validation": 141
+  },
+  "required_missing_facts": [
+    "current free Kaggle quota/account permission",
+    "separate private offline Solar notebook/official data attachment",
+    "exact CUDA/PyTorch environment qualification",
+    "actual CUDA device name/count and free memory",
+    "verified external allocation stop/release path",
+    "run-specific owner authorization binding source freeze"
+  ],
+  "sampling": "Uniform physical training image, then uniform annotator; union only that annotator masks.50%uniform crop/50%uniform positive-pixel centered crop when available.",
+  "schema": "qmai.solar-neural-plan/v1",
+  "scoring": {
+    "official_notebook_version": 6,
+    "pairs_per_call": 100000,
+    "pairs_total": 1000000,
+    "pool": "matched-IoU numerator and TP/FP/FN across all234 annotator groups",
+    "seconds_per_call": 120,
+    "seconds_total": 600,
+    "strict_iou_threshold": 0.5
+  },
+  "seed": 20261108,
+  "selection": "One seed, final checkpoint only. No validation tuning, ensemble, retry or resume.",
+  "status": "SOURCE_ONLY_UNTRAINED_UNQUALIFIED",
+  "task_accepted": false,
+  "tests_executed": false,
+  "training_executed": false,
+  "training_seconds": 2100,
+  "training_steps": 2000,
+  "validation_annotator_groups": 234,
+  "validation_components": 34,
+  "validation_seconds": 1200
+}

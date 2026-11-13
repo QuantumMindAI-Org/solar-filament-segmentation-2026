@@ -1,0 +1,45 @@
+{
+ "arm": "run2",
+ "decomposition_chosen": null,
+ "ensemble_formula": "E = (2*S + n) // (2*n)",
+ "inter_annotator_pq": null,
+ "k1_sha": "55aaf364f7095dfb78c2a9e081d9d30e16b5559e43574f45cefb6ab517a27a7a",
+ "kr_runs": [
+  "R1",
+  "R2",
+  "R3"
+ ],
+ "model_counts": {
+  "K1": 3,
+  "K2": 1,
+  "KR": 3
+ },
+ "per_run_base": null,
+ "prereg": "SOLAR-SEL-R4-ADDENDUM-1",
+ "rule": {
+  "A": 1024,
+  "T_high": 0.8,
+  "T_low": 0.15
+ },
+ "runs": [
+  "run2"
+ ],
+ "scores": {
+  "K1": 0.2136227282202798,
+  "K2": 0.2142481381442483,
+  "KR": 0.20668774969942935
+ },
+ "seeds": [],
+ "stopped": false,
+ "validation_pq": {
+  "fn": 1217,
+  "fp": 554,
+  "matched_iou_sum": 285.0571478009224,
+  "pq": 0.2142481381442483,
+  "tp": 445
+ },
+ "weights_sha256": {
+  "run2": "69d9687ac4baa36a2c60d556da945b7346883a9a54340b60c309b52f748f9ce1"
+ },
+ "which": "K2"
+}

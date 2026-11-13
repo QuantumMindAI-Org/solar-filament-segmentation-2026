@@ -1,0 +1,57 @@
+{
+ "candidate_sha256": "90e328f8d754b00a84504b7c5a910c727d743a00ba673c5c08df0df7e3922c9e",
+ "gates": [
+  {
+   "expected_pq": 0.2142481381442483,
+   "expected_tp": 445,
+   "got": {
+    "fn": 1217,
+    "fp": 554,
+    "pq": 0.2142481381442483,
+    "tp": 445
+   },
+   "name": "candidate",
+   "passed": true
+  },
+  {
+   "expected": {
+    "fn": 1217,
+    "fp": 554,
+    "tp": 445
+   },
+   "got": {
+    "fn": 1217,
+    "fp": 554,
+    "pq": 0.2142481381442483,
+    "tp": 445
+   },
+   "name": "run2",
+   "passed": true
+  },
+  {
+   "expected": {
+    "fn": 1181,
+    "fp": 22599,
+    "tp": 481
+   },
+   "got": {
+    "fn": 1181,
+    "fp": 22599,
+    "pq": 0.023921661601090872,
+    "tp": 481
+   },
+   "name": "geometry",
+   "passed": true
+  }
+ ],
+ "manifest_sha256": "8dffcf11eaf89e7f1c74a0ef82048acb013c87040b42247dfacfe646744abe4e",
+ "passed": true,
+ "prereg_sha256": "7618eaec3cd9c12eb63733504b951a78bebe303218e543b0a25b87eeb3265ede",
+ "registered_cohort": true,
+ "rehearsal_sha256": "9029a1cd53eef5c2e27e6b9836fa0b45700d467b112c8eb43c7d33d991e30927",
+ "run2_weights_sha256": "69d9687ac4baa36a2c60d556da945b7346883a9a54340b60c309b52f748f9ce1",
+ "threads": 4,
+ "weights_sha256": {
+  "run2": "69d9687ac4baa36a2c60d556da945b7346883a9a54340b60c309b52f748f9ce1"
+ }
+}

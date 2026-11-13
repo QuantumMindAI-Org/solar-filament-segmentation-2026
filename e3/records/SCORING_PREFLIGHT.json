@@ -1,0 +1,55 @@
+{
+ "child_peak_rss_max_gib": 0.72259521484375,
+ "child_start": [
+  {
+   "import_s": 3.489077091217041,
+   "pid": 20,
+   "ready_maxrss_gib": 0.545745849609375,
+   "start_maxrss_gib": 0.545745849609375
+  },
+  {
+   "import_s": 3.483506441116333,
+   "pid": 21,
+   "ready_maxrss_gib": 0.5491600036621094,
+   "start_maxrss_gib": 0.545745849609375
+  },
+  {
+   "import_s": 3.463416576385498,
+   "pid": 22,
+   "ready_maxrss_gib": 0.545745849609375,
+   "start_maxrss_gib": 0.545745849609375
+  },
+  {
+   "import_s": 3.4848978519439697,
+   "pid": 23,
+   "ready_maxrss_gib": 0.5496368408203125,
+   "start_maxrss_gib": 0.545745849609375
+  }
+ ],
+ "child_start_seconds": [
+  3.489077091217041,
+  3.483506441116333,
+  3.463416576385498,
+  3.4848978519439697
+ ],
+ "component": 11,
+ "gt_rows": 178,
+ "images": 7,
+ "mode": "subprocess",
+ "oracle_union_map": {
+  "fn": 33,
+  "fp": 47,
+  "matched_iou_sum": 116.5625541806221,
+  "pq": 0.6300678604357951,
+  "tp": 145
+ },
+ "parent_peak_rss_gib": 11.974895477294922,
+ "seconds": 5.926712274551392,
+ "zero_map": {
+  "fn": 178,
+  "fp": 0,
+  "matched_iou_sum": 0.0,
+  "pq": 0.0,
+  "tp": 0
+ }
+}

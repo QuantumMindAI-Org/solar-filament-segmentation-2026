@@ -1,0 +1,4 @@
+# requirements.txt plus what is needed to open and run reproduce.ipynb in Jupyter (Python 3.12).
+-r requirements.txt
+notebook==7.6.5
+ipykernel==7.4.0

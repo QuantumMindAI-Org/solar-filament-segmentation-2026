@@ -1,0 +1,23 @@
+{
+ "file": "submission.csv",
+ "order": "written as UNVALIDATED_DO_NOT_SUBMIT.tmp, LF-checked, validated, re-derived from test_maps, then renamed",
+ "rule": {
+  "A": 256,
+  "T_high": 0.85,
+  "T_low": 0.5,
+  "limb": 0.9
+ },
+ "sha256": "45eb4079bf0383ef315bb5d5274b9672afbd5d32195978ffc565215f3fefd3bf",
+ "submitted": false,
+ "test_maps_index_sha256": "3a3f90782839dbec1e1138f24fb3d046181d08e630798449d6f9786b44bf722d",
+ "validator": {
+  "images_with_rows": 178,
+  "images_without_rows": 2,
+  "instances": 1477,
+  "official_images": 180,
+  "ok": true,
+  "overlap": 0,
+  "rows": 1477
+ },
+ "weights_sha256": "492d96619b865d1ff4c29a4dee99e33feea670f4012f456c2666b0f55e3e51ba"
+}

@@ -1,0 +1,19 @@
+{
+ "checkpoint": "end of the planned 30-epoch run (best periodic checkpoint)",
+ "chosen_rule": [
+  0.5,
+  0.85,
+  256,
+  0.9
+ ],
+ "epochs_done": 30,
+ "registered_baseline_validation_pq": 0.2142481,
+ "rule": "PLAN.md section 4 gate D1: validation PQ (best grid point) >= 0.30 continue; 0.27-0.30 continue only with time; < 0.27 stop track 2",
+ "stopped_early": null,
+ "submit_allowed_by_stop_rule": true,
+ "test_stage_runs": true,
+ "threshold": 0.27,
+ "validation_cv_pq": 0.4232191089986017,
+ "validation_pq_best_grid": 0.4232191089986017,
+ "verdict": "CONTINUE"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "solar-filament-candidate/v1",
+  "status": "FINAL",
+  "label": "K2",
+  "models": [
+    {
+      "name": "run2",
+      "file": "weights/run2.pt",
+      "sha256": "69d9687ac4baa36a2c60d556da945b7346883a9a54340b60c309b52f748f9ce1"
+    }
+  ],
+  "ensemble": "integer_mean_half_up",
+  "entry": "E1",
+  "note": "Final candidate (entry E1): one model, run 2, hysteresis rule. expected_csv_sha256 is the sha256 of the CSV submitted to the competition as entry E1, shipped as submitted/e1.csv. The selection record that chose this candidate is records/SELECTION_CANDIDATE.json (sha256 90e328f8d754b00a84504b7c5a910c727d743a00ba673c5c08df0df7e3922c9e).",
+  "rule": {
+    "T_low": 0.15,
+    "T_high": 0.8,
+    "A": 1024
+  },
+  "expected_csv_sha256": "da9de8064832d9be7f7bd81729c6a981bc8a308b0c94758b0797f7d754e55da5",
+  "submitted_csv": "submitted/e1.csv"
+}

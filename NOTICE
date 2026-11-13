@@ -1,0 +1,13 @@
+Third-party material in this repository
+
+evaluation/organiser_cell3.py.txt and evaluation/organiser_cell4.py.txt are two code cells copied
+unchanged from the competition organisers' public notebook "Self Evaluation Notebook" (version 6),
+which its page licenses under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+They define the overlap matrices and the panoptic-quality score used by the optional metrics cell of
+reproduce.ipynb. The full text of the Apache License, Version 2.0 is in the file LICENSE-APACHE-2.0
+in this repository; this notice and that text travel with the two cells. The rest of the
+repository is under the licence in LICENSE, except the trained weights (below).
+
+The trained weights in weights/ were produced from the competition's training data, which is
+distributed under CC BY-NC 4.0. They are not under the licence in LICENSE: they are for
+non-commercial use only, as stated in WEIGHTS-TERMS.md. The data itself is not part of this repository.

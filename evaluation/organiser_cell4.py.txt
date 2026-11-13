@@ -1,0 +1,55 @@
+def get_pq_score(overlap_df: pd.DataFrame) -> float:
+    """
+    Compute the Panoptic Quality (PQ) score over all images.
+
+    A GT/prediction pair is a true positive (TP) when its IoU exceeds the
+    IoU threshold (0.5). Predictions with no match are false positives (FP),
+    GT filaments with no match are false negatives (FN), and:
+
+        PQ = sum(IoU of TP pairs) / (|TP| + 0.5 * |FP| + 0.5 * |FN|)
+
+    Args:
+        overlap_df: Per-image overlap table as produced by ``get_overlap_df``;
+            must contain columns ``iou_matrix`` (IoU tensor of shape
+            (n_gt, n_pred)), ``n_gt`` (GT filament count), and ``n_pred``
+            (predicted filament count).
+
+    Returns:
+        Panoptic Quality score in ``[0, 1]`` (higher is better), or ``0.0`` if
+        the denominator is zero.
+    """
+    iou_threshold: float = 0.5
+
+    tp_iou_scores: list[float] = []
+    fp_count = 0
+    fn_count = 0
+
+    for row in overlap_df.itertuples(index=False):
+        iou_matrix = row.iou_matrix
+        n_gt = row.n_gt
+        n_pred = row.n_pred
+
+        if n_gt == 0:
+            fp_count += n_pred
+            continue
+
+        if n_pred == 0:
+            fn_count += n_gt
+            continue
+
+        hit_matrix = iou_matrix > iou_threshold
+
+        tp_iou_scores.extend(iou_matrix[hit_matrix].tolist())
+
+        fp_count += fp_count_hit(hit_matrix)
+        fn_count += fn_count_hit(hit_matrix)
+
+    tp_count = len(tp_iou_scores)
+    denominator = tp_count + 0.5 * fp_count + 0.5 * fn_count
+
+    if denominator > 0:
+        pq_score = sum(tp_iou_scores) / denominator
+    else:
+        pq_score = 0.0
+
+    return pq_score

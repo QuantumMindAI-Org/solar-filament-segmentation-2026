@@ -1,0 +1,41 @@
+{
+ "dry": false,
+ "epochs_done": 30,
+ "holdout_opened": false,
+ "mode": "full",
+ "schema": "qmai.solar-track2-r3/v1",
+ "scoring_workers": [
+  {
+   "import_s": 3.489077091217041,
+   "pid": 20,
+   "ready_maxrss_gib": 0.545745849609375,
+   "start_maxrss_gib": 0.545745849609375
+  },
+  {
+   "import_s": 3.483506441116333,
+   "pid": 21,
+   "ready_maxrss_gib": 0.5491600036621094,
+   "start_maxrss_gib": 0.545745849609375
+  },
+  {
+   "import_s": 3.463416576385498,
+   "pid": 22,
+   "ready_maxrss_gib": 0.545745849609375,
+   "start_maxrss_gib": 0.545745849609375
+  },
+  {
+   "import_s": 3.4848978519439697,
+   "pid": 23,
+   "ready_maxrss_gib": 0.5496368408203125,
+   "start_maxrss_gib": 0.545745849609375
+  }
+ ],
+ "seconds_total": 5163.353497743607,
+ "status": "COMPLETE",
+ "steps": 3300,
+ "stopped_early": null,
+ "submitted": false,
+ "test_images_read": 180,
+ "validation_pq": 0.4232191089986017,
+ "verdict": "CONTINUE"
+}
